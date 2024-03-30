@@ -7,6 +7,9 @@ on:
 
 jobs:
   build:
+    name: Change to website directory
+    run: cd ./website
+
     name: Build Docusaurus
     runs-on: ubuntu-latest
     steps:
@@ -16,8 +19,7 @@ jobs:
         with:
           node-version: 18
           cache: yarn
-        working-directory: ./website
-  
+
       - name: Test build
         run: |
           yarn install --immutable
