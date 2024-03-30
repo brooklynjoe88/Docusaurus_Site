@@ -7,14 +7,16 @@ on:
 
 jobs:
   build:
-    name: Change to website directory
-    run: cd ./website
 
     name: Build Docusaurus
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
 
+      - name: Change to website directory
+        run: cd ./website
+      
+  
       - uses: actions/setup-node@v3
         with:
           node-version: 18
