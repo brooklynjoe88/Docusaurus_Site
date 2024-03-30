@@ -16,6 +16,7 @@ jobs:
         with:
           node-version: 18
           cache: yarn
+        working-directory: ./website
   
       - name: Test build
         run: |
@@ -24,7 +25,7 @@ jobs:
 
       - name: Spellcheck
         run: yarn spellcheck
-        
+
       # - name: Upload Build Artifact
       #   uses: actions/upload-pages-artifact@v3
       #   with:
