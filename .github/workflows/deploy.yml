@@ -23,10 +23,10 @@ jobs:
           yarn install --immutable
           yarn build
 
-      # - name: Upload Build Artifact
-      #   uses: actions/upload-pages-artifact@v3
-      #   with:
-      #     path: build
+      - name: Upload Build Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: build
 
   # deploy:
   #   name: Deploy to GitHub Pages
