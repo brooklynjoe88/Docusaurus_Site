@@ -24,3 +24,8 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Test build website
         run: yarn build
+      
+      - name: Check spelling
+        run: |
+            npm install -g cspell
+            cspell "src/**/*.js"
